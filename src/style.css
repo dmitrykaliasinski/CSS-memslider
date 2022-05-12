@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(../src/img/—Pngtree—blue\ gradient\ milky\ way\ starry_5952469.png);
+  background-repeat: repeat;
+  background-size: cover;
+  background-color: #000;
+  height: 100vh;
+}
+.container {
+  max-width: 1280px;
+  padding: 0 40px;
+  margin: 0 auto;
+  font-family: 'Bakbak One', cursive;
+}
+
+.mem {
+  font-size: 60px;
+  text-align: center;
+  padding: 20px 0;
+  color: rgb(255, 174, 0);
+  text-shadow: 1px 6px 5px black;
+}
+
+.slider {
+  max-width: 944px;
+  height: 440px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.text-slider {
+  height: 40px;
+}
+
+.navigation {
+  text-align: center;
+}
+
+.bar {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.bar p {
+  width: 30px;
+  height: 20px;
+  background-color: rgb(255, 174, 0);
+  border-radius: 10px;
+  margin: auto;
+  transform: translateY(75%);
+  transition: 0.4s ease;
+  box-shadow: 0px 0.5em 1em #000000;
+}
+
+.bar:hover p {
+  background-color: aliceblue;
+}
+.bar:active p {
+  transform: translateY(100%);
+}
+
+.bar:focus {
+  background-color: #000;
+}
+
+input[name='r'] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.slides {
+  width: 400%;
+  height: 100%;
+  display: flex;
+}
+
+.slide {
+  width: 25%;
+  box-shadow: #000;
+  transition: 0.5s ease-in-out;
+  text-align: center;
+}
+
+.slide p {
+  color: rgb(255, 174, 0);
+  text-shadow: 1px 6px 5px black;
+  font-size: 25px;
+  text-align: start;
+}
+
+.slide img {
+  width: 90%;
+  height: 90%;
+  box-shadow: 0px 0.2em 0.5em #000000;
+}
+
+#r1:checked ~ .s1 {
+  margin-left: 0;
+}
+#r2:checked ~ .s1 {
+  margin-left: -25%;
+}
+#r3:checked ~ .s1 {
+  margin-left: -50%;
+}
+#r4:checked ~ .s1 {
+  margin-left: -75%;
+}
+
+#r1:checked ~ .slide .p1 {
+  transform: translateX(35%);
+  transition: 1s;
+}
+#r2:checked ~ .slide .p2 {
+  transform: translateX(40%);
+  transition: 1s;
+}
+#r3:checked ~ .slide .p3 {
+  transform: translateX(25%);
+  transition: 1s;
+}
+#r4:checked ~ .slide .p4 {
+  transform: translateX(30%);
+  transition: 1s;
+}
+
+#r1:checked ~ .b1 p {
+  background-color: aliceblue;
+}
+#r2:checked ~ .b2 p {
+  background-color: aliceblue;
+}
+#r3:checked ~ .b3 p {
+  background-color: aliceblue;
+}
+#r4:checked ~ .b4 p {
+  background-color: aliceblue;
+}
